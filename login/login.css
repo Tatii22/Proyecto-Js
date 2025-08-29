@@ -1,11 +1,235 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+:root {
+    --LeBlanc: #F8F8F8;
+    --Font: 'Tenor Sans', sans-serif;
+    --gris-claro: #ccc;
+    --negro: #000;
+    --gris-oscuro: #666;
+    --negro-boton: #1a1a1a;
+    --rojo-enlace: #f75d5f;
+}
+
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
+
+body {
+    background-color: var(--LeBlanc);
+    font-family: var(--Font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.form-container {
+    width: 70%;
+    max-width: 800px;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 300px;
+}
+
+.tittle {
+    margin-bottom: 2rem;
+}
+
+.tittle h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--negro-boton);
+}
+
+.tittle img {
+    width: 150px;
+    margin: 1rem 0;
+}
+
+.tittle p {
+    font-size: 1.2rem;
+    color: var(--negro);
+    line-height: 1.5;
+}
+.login-form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 1rem 0 3.5rem;
+    border: 1px solid var(--gris-claro);
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #b0b0b0;
+    font-size: 13px;
+}
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-70%);
+    width: 28px;
+    height: 28px;
+}
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.forgot {
+    text-align: right;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.forgot a {
+    color: var(--gris-oscuro);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.signin-button {
+    width: 50%;
+    padding: 0.8rem;
+    background-color: var(--negro-boton);
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: var(--Font);
+}
+
+.signin-button:hover {
+    background-color: #333;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.divider img {
+    width: 200px;
+}
+
+.divider h4 {
+    color: var(--rojo-enlace);
+    font-size: 1rem;
+    font-weight: normal;
+}
+.social-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-button {
+    flex: 1;
+    max-width: 180px;
+    padding: 0.8rem;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: var(--gris-oscuro);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.social-button:hover {
+    background-color: #e0e0e0;
+}
+
+.register-link {
+    font-size: 0.9rem;
+    color: var(--gris-oscuro);
+    text-align: center;
+}
+
+.register-link a {
+    color: var(--rojo-enlace);
+    text-decoration: none;
+}
+.img-modelo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 20px;
+}
+.modelo {
+    width: 400px;
+    height: auto;
+}
+
 @media (max-width: 768px) {
-    *{
+    * {
         padding: 0px;
         margin: 0px;
         box-sizing: border-box;
-    }    }
+    }
+
+    .form-container {
+        margin-top: 50px;
+        padding: 20px 0px;
+        width: 90%;
+        background-color: #f9f9f9;
+    }
+
+    .tittle {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+    }
+
+    .img-modelo {
+        display: none;
+    }
+
+    .divider img {
+    width: 150px;
+}
+    .divider h4 {
+    font-size: 0.8em;
+    text-overflow:clip;
+}
+}
