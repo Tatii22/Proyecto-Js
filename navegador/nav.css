@@ -1,0 +1,166 @@
+:root{
+    --LeBlanc: #FCFCFC;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+    body{
+        background-color: var(--LeBlanc);
+        height: 200vh;
+    }
+    button{
+        all: unset;
+    }
+    button > img{
+       width: 20px;
+    }
+    a{
+        all: unset;
+    }
+    #nav{
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        position: fixed;
+        top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 25px;
+        padding-right: 25px;
+        z-index: 1;
+
+    }
+    .slide_info{
+        left: -150px;
+        position: fixed;
+        padding-top: 30px;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 11px;
+        width: 35%;
+        height: calc(100dvh - 50px);
+        margin-top: 50px;
+        background-color: white;
+
+    }
+    @keyframes slideout {
+    from {
+        left: -150px;
+    }
+
+    to {
+        left: 0px;
+    }
+    }
+    
+    @keyframes slidein {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: -150px;
+    }
+    }
+
+    .equis{
+        position: absolute;
+        right: 15px;
+        top: 5px;
+    }
+
+    .slideout {
+    animation: slideout 0.3s forwards;
+    }
+
+    .slidein {
+    animation: slidein 0.3s forwards;
+    }
+
+
+    .cart_info{
+        right: -500px;
+        position: fixed;
+        width: 80%;
+        height: calc(100vh - 50px);
+        padding-top: 35px;
+        margin-top: 50px;    
+        background-color: white;  
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 11px;
+        padding-bottom: 40px;
+        padding-left: 10px;
+    }
+    .products_container{
+        width: 97%;
+        height: 80%;
+
+        background-color: #dedede27;
+    }
+    .equis2{
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+    .BuyBotton{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        left: 0px;
+        height: 40px;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 8px;
+    }
+    .subtotal{
+        width: 97%;
+        height: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @keyframes slideout-cart {
+    from {
+        right: -500px;
+    }
+
+    to {
+        right: 0px;
+    }
+    }
+    
+    @keyframes slidein-cart {
+    from {
+        right: 0px;
+    }
+
+    to {
+        right: -500px;
+    }
+    }
+
+    .slideout-cart {
+    animation: slideout-cart 0.3s forwards;
+    }
+
+    .slidein-cart {
+    animation: slidein-cart 0.3s forwards;
+    }
+
+}

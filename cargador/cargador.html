@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/cargador/cargador.css">
-    <title>Cargador</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/cargador/cargador.css">
+  <title>Cargador</title>
 </head>
 <body>
-    <main class="Cargador_main">
-        <div>
-            <img src="/public/src/img/image-removebg-preview (91) 3.png" alt="">
-        </div>
-        <p>Cargando....</p>
-        <div>
-            <div>
-            </div>
-        </div>
-    </main>
+
+  <main class="Cargador_main">
+    <div>
+      <img src="/public/src/img/image-removebg-preview (91) 3.png" alt="">
+    </div>
+    <p>Cargando....</p>
+    <div>
+      <div></div>
+    </div>
+  </main>
+
+  <script>
+    const nuevaPagina = "/navegador/nav.html";
+    const tiempoEspera = 3000; 
+    setTimeout(() => {
+      window.location.href = nuevaPagina;
+    }, tiempoEspera);
+
+  </script>
 </body>
-
-<script>
-const nuevaPagina = "/login/login.html";
-const tiempoEspera = 5900;
-
-setTimeout(() => {
-  window.location.href = nuevaPagina;
-}, tiempoEspera);
-</script>
-
 </html>
