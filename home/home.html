@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/home/home.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Home</title>
+</head>
+<body>
+    <div id="nav-container"></div>
+    <div class="c_video">
+        <video class="video" src="/public/src/video/main (1).mp4" autoplay muted loop></video>
+        <video class="videoPhone" src="/public/src/video/main (2).mp4" autoplay muted loop></video>
+    </div>
+    <div class="info">
+
+    </div>
+</body>
+<script>
+
+    fetch("/navegador/nav.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("nav-container").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/navegador/navegador.js";
+        document.body.appendChild(script);
+    })
+    .catch(err => console.error("Error cargando navbar:", err));
+
+
+</script>
+</html>
