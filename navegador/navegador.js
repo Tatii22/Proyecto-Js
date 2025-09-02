@@ -2,6 +2,7 @@
 let flag = false;  // estado del nav
 let flag2 = false; // estado del carrito
 
+const nav = document.querySelector(".nav")
 /*Nav*/
 const boton = document.querySelector(".hamburguesa");
 const x = document.querySelector(".equis");
@@ -68,6 +69,16 @@ cart_info.addEventListener("animationend", (e) => {
   }
 });
 
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector("#nav-container #nav");
+  const limite = window.innerHeight * 1; 
+
+  if (window.scrollY >= limite) {
+  nav.style.backgroundColor = "#FCFCFC"; 
+  } else {
+  nav.style.backgroundColor = ""; 
+  }
+});
 /* fetch("/navegador/nav.html")
   .then(res => res.text())
   .then(data => {
