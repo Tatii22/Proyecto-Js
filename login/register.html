@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/login/login.css">
+    <link rel="stylesheet" href="/login/register.css">
 </head>
 
 <body>
     <main class="main-container">
+        <section class="img-modelo">
+            <img src="/public/src/img/modelo.png" alt="Modelo Image" class="modelo">
+        </section>
         <section class="form-container">
             <div class="tittle">
-                <h1>Login</h1>
+                <h1> Create<br>Account</h1>
                 <img src="../public/src/icons/Devider.svg" alt="Line separator">
-                <p>Hello! You’ve <br> been Missed!</p>
             </div>
 
             <form class="login-form">
@@ -22,19 +24,24 @@
                     <img src="../public/src/icons/user.svg" alt="user" class="input-icon" />
                     <input type="text" id="username" name="username" placeholder="Username" required />
                 </div>
+                <div class="input-group">
+                    <img src="../public/src/icons/correo-electronico.svg" alt="email" class="input-icon" />
+                    <input type="email" id="email" name="email" placeholder="email" required />
+                </div>
 
                 <div class="input-group">
                     <img src="../public/src/icons/candado.svg" alt="lock" class="input-icon2" />
                     <input type="password" id="password" name="password" placeholder="Password" required />
                     <img src="../public/src/icons/ojo.svg" alt="show/hide password" class="toggle-password" />
                 </div>
-
-                <div class="forgot">
-                    <a href="#">Forget Password?</a>
+                <div class="input-group">
+                    <img src="../public/src/icons/candado.svg" alt="lock" class="input-icon2" />
+                    <input type="password" id="password" name="password" placeholder="Repeat Password" required />
+                    <img src="../public/src/icons/ojo.svg" alt="show/hide password" class="toggle-password" />
                 </div>
 
                 <div class="sign-button-container">
-                    <button type="submit" class="signin-button">Sign In</button>
+                    <button type="submit" class="signin-button">Register</button>
                 </div>
             </form>
 
@@ -46,8 +53,8 @@
 
             <div class="social-buttons-container">
                 <a href="#" class="social-button google">
-                    Google
                     <img src="/public/src/icons/simbolo-de-google.svg" alt="Google Logo" />
+                    Google
                 </a>
                 <a href="#" class="social-button facebook">
                     <img src="/public/src/icons/facebook.svg" alt="Facebook Logo" />
@@ -55,11 +62,9 @@
                 </a>
             </div>
 
-            <p class="register-link">Not a Member? <a href="/sign in/sign in.html">Register</a></p>
+            <p class="register-link">Not a Member? <a href="/login/login.html">Login</a></p>
         </section>
-        <section class="img-modelo">
-            <img src="/public/src/img/modelo.png" alt="Modelo Image" class="modelo">
-        </section>
+        
     </main>
 </body>
 
