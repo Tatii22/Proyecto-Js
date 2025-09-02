@@ -22,7 +22,6 @@
 body {
     background-color: var(--blanco-fondo);
     font-family: var(--Font);
-    overflow: hidden;
 }
 
 .img-modelo {
@@ -33,7 +32,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    overflow: hidden;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 .form-container {
