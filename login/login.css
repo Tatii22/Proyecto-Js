@@ -253,8 +253,19 @@ body {
         background-color: var(--blanco-form);
     }
 
+    .tittle h1 {
+        font-size: 2.8rem;
+        font-weight: 500;
+    }
+
+    .tittle p {
+        font-size: 1rem;
+    }
+
     .input-group input::placeholder {
-        font-size: 0.6rem;
+        font-family: var(--Font);
+        font-size: 0.7rem;
+        color: #B2B2B2;
     }
 
     .forgot {
@@ -262,12 +273,16 @@ body {
         margin-top: -2.2rem;
     }
 
+    .divider h4 {
+        font-size: 16px;
+    }
+
     .signin-button {
         background-color: var(--negro-boton);
         color: var(--blanco-fondo);
         border-radius: 1rem;
         font-weight: 300;
-        font-size: 0.9 rem;
+        font-size: 1rem;
     }
 
     .signin-button:hover {
@@ -292,13 +307,15 @@ body {
     .img-modelo {
         display: flex;
         justify-content: center;
-        align-items: center;
-        width: 50%;
+        align-items: flex-end;
+        height: 100dvh;
+        overflow: hidden;
     }
 
     .modelo {
         width: 100%;
-        max-width: 600px;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
     }
 }

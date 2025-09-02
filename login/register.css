@@ -318,13 +318,15 @@ body {
     .img-modelo {
         display: flex;
         justify-content: center;
-        align-items: center;
-        width: 50%;
+        align-items: flex-end;
+        height: 100dvh;
+        overflow: hidden;
     }
 
     .modelo {
         width: 100%;
-        max-width: 600px;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
     }
 }
