@@ -57,14 +57,14 @@
     }
     .new{
         width: 100%;
-        height: 85vh;
+        height: 70vh;
         display: flex;
         flex-direction: column;
 
     }
     .new_title{
         width: 100%;
-        height: 13%;
+        height: 18%;
         padding-top: 10px;
         display: flex;
         align-items: center;
@@ -102,40 +102,145 @@
     }
     .c_new{
         width: 100%;
-        height: 55%;
+        height: 60%;
         display: flex;
         flex-direction: row;
-        overflow: hidden;
-        gap: 10px;
+        gap: 13px;
         align-items: center;
         padding-left: 5px;
+        padding-right: 5px;
+        overflow: auto;
     }
     .c-1,
     .c-2,
     .c-3{
-        width: 48%;
-        height: 80%;
-        background-color: rgb(181, 179, 179);
-        aspect-ratio: 16/9;
+    width: 48%;
+    height: 80%;
+    background-color: rgb(181, 179, 179);
+    aspect-ratio: 16/9;
     }
     .f_new{
         width: 100%;
         height: 10%;
-        background-color: rgb(255, 242, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5px;
+        font-size: 21px;
+        position: relative;
     }
 
 
 
     .brands{
         width: 100%;
-        height: 200px;
-        background-color: rgb(0, 0, 0);
+        height: 150px;
+    }
+    .top{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: center;
+    }
+    .top > :nth-child(1){
+        width: 33%;
+
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+    }
+    .top > :nth-child(2){
+        width: 33%;
+
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .top > :nth-child(3){
+        width: 33%;
+
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+
+    }
+    .bottom{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: center;
+    }
+    .bottom > :nth-child(1){
+        width: 33%;
+
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+    }
+    .bottom > :nth-child(2){
+        width: 33%;
+
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .bottom > :nth-child(3){
+        width: 33%;
+
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+
+    }
+    .carrousel{
+        position: relative;
+        width: 100%;
+        height: 65dvh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .c_carrousel{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .c_carrousel > div{
+        width: 50%;
+        height: 100%;
+        aspect-ratio: 16/9;
+    }
+    .c_carrousel > div > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .description{
         width: 100%;
         height: 70dvh;
-        background-color: rgb(0, 0, 0);
+        background-color: #F2F2F2;
     }
+    
+    
+    
     .footer{
         width: 100%;
         height: 100dvh;
@@ -156,3 +261,12 @@
         flex-direction: column;
         gap: 5px;
     }
+
+    @media (min-width: 1000px) {
+        .video{
+        display: flex;
+        }    
+        .videoPhone{
+            display: none;
+        }        
+    }    
