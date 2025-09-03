@@ -4,11 +4,17 @@ const closeBtn = document.querySelector('.close-btn');
 
 // Mostrar modal al hacer click en register
 registerBtn.addEventListener('click', function (e) {
-  e.preventDefault(); // evita recarga del formulario
-  modal.style.display = 'flex';
+  e.preventDefault(); 
+  modal.classList.add('show'); 
 });
 
 // Cerrar modal al hacer click en la X
 closeBtn.addEventListener('click', function () {
-  modal.style.display = 'none';
+  modal.classList.remove('show');
+});
+
+window.addEventListener('click', function (e) {
+  if (e.target === modal) {
+    modal.classList.remove('show');
+  }
 });
