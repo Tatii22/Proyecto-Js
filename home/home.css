@@ -18,12 +18,55 @@
         margin: 0px;
         box-sizing: border-box;
     }
+    
+    /* Ancho del scrollbar */
+    ::-webkit-scrollbar {
+    width: 0px;        /* vertical */
+    height: 0px;       /* horizontal */
+    }
+
+    /* Fondo del track */
+    ::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+    }
+
+    /* Thumb (barra que se mueve) */
+    ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    border: 0px solid #f0f0f0; /* Espacio entre thumb y track */
+    }
+
+    /* Hover del thumb */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+
+
+
+    .aa{
+        width: 100%;
+        height: 100%;
+        background-color: #FCFCFC;
+        position: absolute;
+        top: 0px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+
+
     body{
         background-color: var(--LeBlanc);
         width: 100%;
         position: relative;
         height: 300vh;
-
+        -webkit-overflow-scrolling: touch; /* iOS */
     }
     button{
         all: unset;
@@ -36,7 +79,7 @@
     }
     .c_video{
         width: 100%;
-        max-height:105dvh;
+        max-height:105svh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -47,8 +90,6 @@
     }
     .video{
     display: none;
-    }    
-    .videoPhone{
     }    
     .nav-container{
         position: absolute;
@@ -210,7 +251,7 @@
     .carrousel{
         position: relative;
         width: 100%;
-        height: 65dvh;
+        height: 65vh;
         display: flex;
         align-items: flex-end;
         justify-content: center;
@@ -236,7 +277,7 @@
     .description{
         font-family: T;
         width: 100%;
-        height: 70dvh;
+        height: 85vh;
         background-color: #F2F2F2;
         display: flex;
         flex-direction: column;
@@ -340,7 +381,7 @@
 
     .footer{
         width: 100%;
-        height: 100dvh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         padding: 10px;
