@@ -17,7 +17,7 @@
                 <p>Hello! You’ve <br> been Missed!</p>
             </div>
 
-            <form class="login-form">
+            <form class="login-form" action="/home/home.html" method="get">
                 <div class="input-group">
                     <img src="../public/src/icons/user.svg" alt="user" class="input-icon" />
                     <input type="text" id="username" name="username" placeholder="Username" required />
@@ -34,7 +34,8 @@
                 </div>
 
                 <div class="sign-button-container">
-                    <button type="submit" class="signin-button">Sign In</button>
+                        <button type="submit" class="signin-button">Sign In</button>
+
                 </div>
             </form>
 
@@ -62,5 +63,19 @@
         </section>
     </main>
 </body>
+ <script>
+      document.querySelector(".signin-button").addEventListener("submit", function (e) {
+    e.preventDefault(); // evita que recargue la página automáticamente
 
+    // aquí van tus validaciones
+    const valid = true; // <- pon tu lógica real
+
+    if (valid) {
+      // si pasa validaciones, redirige
+      window.location.href = "/home/home.html";
+    } else {
+      alert("Datos incorrectos");
+    }
+  });
+ </script>
 </html>
