@@ -1,0 +1,14 @@
+:root{
+    --LeBlanc: #FCFCFC;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+
+}
