@@ -327,9 +327,20 @@ body {
         background-color: var(--gris-fondo);
     }
 
-    .tittle {
+    .form-container {
+        flex: 1;
+        max-width: 550px;
+        padding: 20px;
+    }
 
-        text-align: center;
+    .login-form {
+        max-width: 300px;
+    }
+
+    .input-group input {
+        width: 100%;
+        height: 3.5rem;
+        background-color: var(--blanco-form);
     }
 
     .tittle h1 {
@@ -337,31 +348,8 @@ body {
         font-weight: 500;
     }
 
-    .tittle2 {
-        margin: 0;
-    }
-
-    .tittle img {
-        width: 160px;
-
-    }
-
-    .form-container {
-        flex: 1;
-        max-width: 600px;
-        padding: 20px;
-
-    }
-
-    .login-form {
-        max-width: 400px;
-    }
-
-    .input-group input {
-        width: 100%;
-        height: 4rem;
-        background-color: var(--blanco-form);
-        padding: 0 1rem 0 3.9rem;
+    .tittle p {
+        font-size: 1rem;
     }
 
     .input-group input::placeholder {
@@ -375,21 +363,20 @@ body {
         margin-top: -2.2rem;
     }
 
-    .register-button {
-        background-color: var(--negro-boton);
-        color: var(--blanco-fondo);
-        border-radius: 1.5rem;
-        font-weight: 300;
-        font-size: 1rem;
-        padding: 1rem;
-    }
-
-    .register-button:hover {
-        color: #000000;
-    }
-
     .divider h4 {
         font-size: 16px;
+    }
+
+    .signin-button {
+        background-color: var(--negro-boton);
+        color: var(--blanco-fondo);
+        border-radius: 1rem;
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .signin-button:hover {
+        color: #000000;
     }
 
     .social-buttons-container {
