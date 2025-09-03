@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/addcard/card.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+</head>
+<body>
+    <div id="nav-container">
+
+    </div>
+    <div class="main">
+        <div class="tittle">
+            <p>PAYMENT METHOD</p>
+
+        </div>
+        <div class="container_card">
+            <div class="card">
+                <img style=" top: 0px; width: 250px; " src="/public/src/img/card.png" alt="">
+            </div>
+        </div>
+        <div class="form">
+            <form class="card-form">
+
+                <input type="text" id="name" name="name" placeholder="Name On Card">
+
+
+                <input type="text" id="number" name="number" placeholder="Card Number">
+
+                <div class="row">
+                <div>
+
+                    <input type="text" id="month" name="month" placeholder="Exp Month">
+                </div>
+                <div>
+
+                    <input type="text" id="year" name="year" placeholder="Exp Date">
+                </div>
+                </div>
+
+                <input type="text" id="cvv" name="cvv" placeholder="CVV">
+            </form>
+        </div>
+
+        <button class="add_card">
+            <p>Add Card</p>
+        </button>        
+    </div>
+
+</body>
+<script>
+        fetch("/navegador/nav.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("nav-container").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/navegador/navegador.js";
+        document.body.appendChild(script);
+    })
+    .catch(err => console.error("Error cargando navbar:", err));
+</script>
+</html>
