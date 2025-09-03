@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/method/method.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="nav-container">
+
+    </div>
+    <div class="main">
+        <div class="tittle">
+            <p>METHOD</p>
+            <img style="margin-top: 15px;" src="/public/src/icons/Devider.svg" alt="">
+        </div>      
+
+
+        <div class="Shipping_Adress">
+            <p style=" color: #888888; margin-left: 10px;">SHIPPING ADRESS</p>
+            <div class="s_a_c">
+                <p style="color: black;">Brandon Blanco</p>
+                <p>606-3727 Ullamcorper. Street</p>
+                <p>Roseville NH 11523</p>
+                <p>(786) 713-8616</p>
+                <img  style="position: absolute; right: 8%; top: 25%;" src="/method/Forward.png"></p>
+                <a href="/shipping/shipping.html">
+                <div id="s_a_c_button">
+                    <p>Add shipping adress</p>
+                    <p>+</p>
+                </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="Shipping_Method">
+            <p style=" color: #888888;">SHIPPING METHOD</p>
+            <div class="s_a_c_2">
+                <div id="s_a_c_button">
+            <div class="select-box">
+                <select id="shipping">
+                <option value="pickup">Pickup at store </option>
+                <option value="standard">Standard Shipping </option>
+                <option value="express">Express Shipping </option>
+                </select>
+            </div>
+                </div>
+            </div>        
+        </div>
+        <div class="PaymentMethod">
+            <p style=" color: #888888;">PAYMENT METHOD</p>
+            <div class="s_a_c_2">
+                <a href="/addcard/card.html">
+                <div  id="s_a_c_button">
+                    <p>Select Payment Method</p>
+                    <p>+</p>
+                </div>
+                </a>
+
+            </div> 
+        </div>
+        <div class="total">
+            <p>TOTAL</p>
+            <p style="color: #DD8560;">$240</p>
+        </div>
+        <button class="add_address">
+            <p>CHECKOUT</p>
+        </button>         
+    </div>    
+    
+
+</body>
+<script>
+          document.body.style.overflow = "hidden"
+    fetch("/navegador/nav.html")
+    .then(res => res.text())
+    .then(data => {
+    document.getElementById("nav-container").innerHTML = data;
+
+    const script = document.createElement("script");
+    script.src = "/navegador/navegador.js";
+    document.body.appendChild(script);
+    })
+    .catch(err => console.error("Error cargando navbar:", err));
+</script>
+</html>

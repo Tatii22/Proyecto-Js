@@ -43,6 +43,7 @@
     </div>
 </body>
 <script>
+          document.body.style.overflow = "hidden"
     fetch("/navegador/nav.html")
     .then(res => res.text())
     .then(data => {
