@@ -21,7 +21,7 @@ En [Figma](https://www.figma.com/design/6HFe4ssA0Sb96y06MzWRip/Untitled?node-id=
   - Refuerza la identidad visual de la marca.
 
 <div align="center">
-  <img src="/documentacion/img/1.svg" alt="Pantalla 1" width="150"/>
+  <img src="/documentacion/logo.svg" alt="Pantalla 1" width="150"/>
 </div>
 
 - **Pantalla de login:**
@@ -31,9 +31,7 @@ En [Figma](https://www.figma.com/design/6HFe4ssA0Sb96y06MzWRip/Untitled?node-id=
   - Botón *Sign In*.
   - Opciones de login social (Google y Facebook).
 
-<div align="center">
-  <img src="/documentacion/img/Login.png" alt="Pantalla Login" width="700" style="border: 1px solid #ccc; border-radius: 1px;"/>
-</div>
+
 
 - **Pantalla de registro (Create Account):**
   - Campos de username, email, password y confirmación de password.
@@ -41,17 +39,13 @@ En [Figma](https://www.figma.com/design/6HFe4ssA0Sb96y06MzWRip/Untitled?node-id=
   - Opciones de login social.
   - Enlace para volver al login (*Already a member? Log in*).
 
-<div align="center">
-  <img src="/documentacion/img/Register.png" alt="Pantalla Login" width="700" style="border: 1px solid #ccc; border-radius: 1px;"/>
-</div>
+
 
 - **Modal de éxito (Account Success):**
   - Confirma la creación de cuenta.
   - Incluye ícono de validación y botón para continuar al login.
 
-<div align="center">
-  <img src="/documentacion/img/Exito.png" alt="Exito" width="700" style="border: 1px solid #ccc; border-radius: 1px;"/>
-</div>
+
 
 ---
 
@@ -67,9 +61,7 @@ En [Figma](https://www.figma.com/design/6HFe4ssA0Sb96y06MzWRip/Untitled?node-id=
   - Sección de tendencias.
   - Footer con enlaces de logo y redes sociales.
 
-<div align="center">
-  <img src="/documentacion/img/Home.png" alt="Home" width="700" style="border: 1px solid #ccc; border-radius: 1px;"/>
-</div>
+
 
 - **Catálogo de productos:**
   - Encabezado con logo, compra, búsqueda y menú.
@@ -78,9 +70,7 @@ En [Figma](https://www.figma.com/design/6HFe4ssA0Sb96y06MzWRip/Untitled?node-id=
   - Paginación en la parte inferior para navegar entre productos.
   - Footer con enlaces de logo y redes sociales.
 
-<div align="center">
-  <img src="/documentacion/img/Catalogo.png" alt="Catalodo" width="700" style="border: 1px solid #ccc; border-radius: 1px;"/>
-</div>
+
 
 - **Detalle de producto**
 - Encabezado con logo, compra, búsqueda y menú.
@@ -91,9 +81,7 @@ En [Figma](https://www.figma.com/design/6HFe4ssA0Sb96y06MzWRip/Untitled?node-id=
 - Sección de información adicional y políticas de servicio.
 - Footer con enlaces de logo y redes sociales.
 
-<div align="center">
-  <img src="/documentacion/img/Description.png" alt="Detalle" width="700" style="border: 1px solid #ccc; border-radius: 1px;"/>
-</div>
+
 
 - **Carrito de compras**
 - Encabezado con menú.
@@ -102,28 +90,19 @@ En [Figma](https://www.figma.com/design/6HFe4ssA0Sb96y06MzWRip/Untitled?node-id=
 - Cálculo automático del total.
 - Botón para proceder al pago (*Checkout*).
 
-<div align="center">
-  <img src="/documentacion/img/Store.png" alt="Store" width="700" style="border: 1px solid #ccc; border-radius: 1px;"/>
-</div>
-
 ### 🔹 Flujo de Checkout
 
 - **Pantalla de Checkout (Selección inicial):**
   - Formulario para ingresar nombre, dirección, ciudad, estado, código postal y teléfono.
   - Botón *Add Now* para guardar.
 
-<div align="center">
-  <img src="/documentacion/img/direccion.png" alt="Pantalla Add Address" width="500" style="border:1px solid #ccc;"/>
-</div>
+
 
 - **Pantalla de añadir tarjeta (Add New Card):**
   - Formulario para ingresar datos de tarjeta: nombre, número, fecha de expiración y CVV.
   - Visualización previa de la tarjeta.
   - Botón *Add Card*.
 
-<div align="center">
-  <img src="/documentacion/img/tarjeta.png" alt="Pantalla Add Card" width="500" style="border:1px solid #ccc;"/>
-</div>
 
 
 - **Pantalla de éxito en el pago (Payment Success):**
@@ -134,9 +113,7 @@ En [Figma](https://www.figma.com/design/6HFe4ssA0Sb96y06MzWRip/Untitled?node-id=
     - *Submit* para enviar la valoración.
     - *Back to Home* para regresar a la pantalla principal.
 
-<div align="center">
-  <img src="/documentacion/img/Checkout.png" alt="Pantalla Payment Success" width="400" style="border:1px solid #ccc;"/>
-</div>
+
 
 ---
 ## 2. Análisis de diseño y usabilidad
