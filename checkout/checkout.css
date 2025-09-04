@@ -157,3 +157,16 @@ body {
     margin-bottom: 1%;
 }
 
+@media (min-width: 1024px) {
+    .container_products {
+        grid-template-columns: repeat(3, 1fr); /* 🔹 En PC: 3 columnas */
+    }
+
+    .main {
+        padding: 40px;
+    }
+
+    .product {
+        padding: 20px;
+    }
+}
