@@ -1,0 +1,203 @@
+    :root{
+        --LeBlanc: #FCFCFC;
+        --font: Hel;
+    }
+    @font-face {
+    font-family: "Hel"; 
+    src: url("/fuentes/Helvetica Regular.otf") format("opentype");
+    font-weight: normal;
+    }
+    @font-face {
+    font-family: "T"; 
+    src: url("/fuentes/TenorSans.woff2") format("opentype");
+    font-weight: 100;
+     font-style: normal;
+    }
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .aa{
+        width: 100%;
+        height: 100%;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 0px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+    }    
+    html{
+        font-family: T;
+    }
+
+    .main{
+        position: relative;
+        font-family: T;
+        width: 100%;
+        min-height: 100vh;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+        padding-right: 15px;
+        justify-content: space-between;
+        padding-bottom: 85px;
+    }
+    .img_product{
+        width: 100%;
+        height: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .title{
+        width: 100%;
+        height: 20px;
+        color: #000000;
+        overflow: hidden;
+    }
+    .description{
+        width: 100%;
+        height: 40px;
+        color: #555555;
+                overflow: hidden;
+    }
+    .price{
+        width: 100%;
+        height: 10px;
+        color: #DD8560;
+    }
+
+    .size{
+        margin-top: 5px;
+        display: flex;
+        flex-direction: row;    
+        width: 100%;
+        height: 20PX;
+        gap: 8px;
+    }
+    .size p{
+        font-size: 12px;
+        margin-top: 3px;
+    }
+    .size div{
+        width: 20px;
+        height: 100%;
+        border-radius: 50%;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0.5px solid rgba(128, 128, 128, 0.153);
+    }
+
+    .button{
+        position: absolute;
+        bottom: 0px;
+        background-color: black;
+        color: white;
+        height: 70px;
+        width: 100%;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+    }
+    .info{
+        padding-top: 45px;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 8px;
+    }
+    .care{
+        width: 100%;
+        height: 20px;
+        position: relative;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    .care p{
+        position: absolute;
+        left: 0px;
+    }
+    .info_top{
+        width: 90%;
+        height: 50%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        color: #555555;
+    }
+    .info_top > img{
+        position: absolute;
+        left: -10%;
+    }
+
+    .info_middle{
+        width: 90%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        font-size: 13px;
+    }
+    .info_middle > img{
+        position: absolute;
+        left: -10%;        
+    }    
+    .info_bottom{
+        width: 90%;
+        height: 30%;
+        display: flex;  
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+        position: relative;
+        font-size: 13px;
+    }
+    .info_bottom > img{
+        position: absolute;
+        left: -10%;        
+    }    
+    .footer{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap:6px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-family: Hel;
+        font-size: 14px;
+    }
+        #arrowup{
+        position: absolute !important;
+        right: 5px !important;
+
+
+    }
+        #arrowup img{
+        transform: rotate(180deg);
+        height: 15px;
+        width: 15px;
+    }

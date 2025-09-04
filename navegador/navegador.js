@@ -71,7 +71,7 @@ cart_info.addEventListener("animationend", (e) => {
 
 window.addEventListener("scroll", () => {
   const nav = document.querySelector("#nav-container #nav");
-  const limite = window.innerHeight * 1; 
+  const limite = window.innerHeight * 0.05; 
 
   if (window.scrollY >= limite) {
   nav.style.backgroundColor = "#FCFCFC"; 
