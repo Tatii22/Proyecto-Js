@@ -7,6 +7,9 @@
     <title>Card</title>
 </head>
 <body>
+        <div class="aa">
+        <img src="/public/src/img/image-removebg-preview (91) 3.png" alt="">
+    </div>
     <div id="nav-container">
 
     </div>
@@ -50,7 +53,17 @@
 
 </body>
 <script>
-          document.body.style.overflow = "hidden"
+    document.body.style.overflow = "hidden";
+  const minicargador = document.querySelector(".aa");
+        minicargador.style.display = "";
+  window.addEventListener("load", () => {
+    const minicargador = document.querySelector(".aa");
+    if (minicargador) {
+      setTimeout(() => {
+        minicargador.style.display = "none";
+      }, 2000); // mismo tiempo que en el transition
+    }
+  });
         fetch("/navegador/nav.html")
     .then(res => res.text())
     .then(data => {
