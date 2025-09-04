@@ -170,6 +170,9 @@
     </footer>
 </body>
 <script>
+    const minicargador = document.querySelector(".aa");
+          minicargador.style.display = "";
+    document.body.style.overflow = "hidden";
 
     fetch("/navegador/nav.html")
     .then(res => res.text())
@@ -182,13 +185,15 @@
     })
     .catch(err => console.error("Error cargando navbar:", err));
 
-      document.body.style.overflow = "hidden"
-setTimeout(() => {
-  const minicargador = document.querySelector(".aa")        
-  minicargador.style.display = "none"
-  document.body.style.overflow = "auto"
-}, 400) 
-
+  window.addEventListener("load", () => {
+    const minicargador = document.querySelector(".aa");
+    if (minicargador) {
+      setTimeout(() => {
+        minicargador.style.display = "none";
+    document.body.style.overflow = "auto";         
+      }, 2000); // mismo tiempo que en el transition
+    }
+  });
 
 </script>
 </html>

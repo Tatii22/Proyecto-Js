@@ -75,6 +75,7 @@ color: white;
 display: flex;
 align-items: center;
 justify-content: center;
+font-family: T;
 }
 
 .card-form{
@@ -97,3 +98,15 @@ font-family: T;
 display: flex;
 gap: 10px;
 }
+    .aa{
+        width: 100%;
+        height: 100%;
+        background-color: #FCFCFC;
+        position: absolute;
+        top: 0px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+    }

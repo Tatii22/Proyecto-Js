@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="aa">
+        <img src="/public/src/img/image-removebg-preview (91) 3.png" alt="">
+    </div>
     <div id="nav-container">
 
     </div>
@@ -72,7 +75,7 @@
 
 </body>
 <script>
-          document.body.style.overflow = "hidden"
+    document.body.style.overflow = "hidden";
     fetch("/navegador/nav.html")
     .then(res => res.text())
     .then(data => {
@@ -83,5 +86,16 @@
     document.body.appendChild(script);
     })
     .catch(err => console.error("Error cargando navbar:", err));
+
+  const minicargador = document.querySelector(".aa");
+        minicargador.style.display = "";
+  window.addEventListener("load", () => {
+    const minicargador = document.querySelector(".aa");
+    if (minicargador) {
+      setTimeout(() => {
+        minicargador.style.display = "none";
+      }, 2000); // mismo tiempo que en el transition
+    }
+  });
 </script>
 </html>
