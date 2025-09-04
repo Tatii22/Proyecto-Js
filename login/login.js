@@ -1,13 +1,13 @@
 // Seleccionar elementos
 const loginForm = document.querySelector(".login-form");
 const togglePassword = document.querySelector(".toggle-password");
-const messageContainer = document.createElement("p"); // contenedor de mensajes
+const messageContainer = document.createElement("p"); 
 messageContainer.style.color = "red";
-loginForm.appendChild(messageContainer); // lo añadimos al formulario
+loginForm.appendChild(messageContainer); 
 
-// Evento submit del formulario
+
 loginForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // evita recargar la página
+    e.preventDefault(); 
 
     const username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value.trim();
@@ -35,9 +35,9 @@ togglePassword.addEventListener("click", function () {
     const input = document.getElementById("password");
     if (input.type === "password") {
         input.type = "text";
-        this.src = "../public/src/icons/ojo.svg"; // icono de ojo abierto
+        this.src = "../public/src/icons/ojo.svg";
     } else {
         input.type = "password";
-        this.src = "../public/src/icons/eye-slash.svg"; // icono de ojo cerrado
+        this.src = "../public/src/icons/eye-slash.svg"; 
     }
 });
