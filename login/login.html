@@ -26,7 +26,7 @@
                 <div class="input-group">
                     <img src="../public/src/icons/candado.svg" alt="lock" class="input-icon2" />
                     <input type="password" id="password" name="password" placeholder="Password" required />
-                    <img src="../public/src/icons/ojo.svg" alt="show/hide password" class="toggle-password" />
+                    <img src="../public/src/icons/eye-slash.svg" alt="show/hide password" class="toggle-password" />
                 </div>
 
                 <div class="forgot">
@@ -46,11 +46,11 @@
             </div>
 
             <div class="social-buttons-container">
-                <a href="#" class="social-button google">
+                <a href="https://accounts.google.com/" target="_blank" class="social-button google">
                     Google
                     <img src="/public/src/icons/simbolo-de-google.svg" alt="Google Logo" />
                 </a>
-                <a href="#" class="social-button facebook">
+                <a href="https://www.facebook.com/" target="_blank" class="social-button facebook">
                     <img src="/public/src/icons/facebook.svg" alt="Facebook Logo" />
                     Facebook
                 </a>
@@ -62,20 +62,7 @@
             <img src="/public/src/img/modelo.png" alt="Modelo Image" class="modelo">
         </section>
     </main>
+    <script src="/data/data.js"></script>
+    <script src="/login/login.js"></script>
 </body>
- <script>
-      document.querySelector(".signin-button").addEventListener("submit", function (e) {
-    e.preventDefault(); // evita que recargue la página automáticamente
-
-    // aquí van tus validaciones
-    const valid = true; // <- pon tu lógica real
-
-    if (valid) {
-      // si pasa validaciones, redirige
-      window.location.href = "/home/home.html";
-    } else {
-      alert("Datos incorrectos");
-    }
-  });
- </script>
 </html>
