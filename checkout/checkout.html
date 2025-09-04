@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <div class="aa">
+        <img src="/public/src/img/image-removebg-preview (91) 3.png" alt="">
+    </div>
     <div id="nav-container">
 
     </div>
@@ -40,22 +43,22 @@
         </div>
 
         <div class="cart">
-            
-        <div class="container_products">
-            <div class="product">
-            </div>
-            <div class="product">
-            </div>
-            <div class="product">
-            </div>
-            <div class="product">
-            </div>
-            <div class="product">
-            </div>
-            <div class="product">
-            </div>
 
-        </div>
+            <div class="container_products">
+                <div class="product">
+                </div>
+                <div class="product">
+                </div>
+                <div class="product">
+                </div>
+                <div class="product">
+                </div>
+                <div class="product">
+                </div>
+                <div class="product">
+                </div>
+
+            </div>
         </div>
 
 
@@ -69,7 +72,29 @@
             <p>PAY</p>
         </button>
     </div>
-
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>PAYMENT SUCCESS</h2>
+            <img src="../public/src/icons/check.svg" alt="success" class="success-icon">
+            <h4>Your payment was success</h4>
+            <p>Payment ID 152634985</p>
+            <img src="../public/src/icons/Devider.svg" alt="success" class="lineacheck">
+            <h5>Rate your purchase</h5>
+            <div class="icons">
+                <div class="icon">
+                    <img src="/public/src/icons/tiste.svg" alt="Triste">
+                </div>
+                <div class="icon">
+                    <img src="/public/src/icons/feli.svg" alt="Feliz">
+                </div>
+                <div class="icon">
+                    <img src="/public/src/icons/more.svg" alt="Amor">
+                </div>
+            </div>
+            <button class="back-btn"><a href="/home/home.html">BACK TO HOME</a></button>
+        </div>
+    </div>
 
 
 </body>
@@ -85,6 +110,37 @@
             document.body.appendChild(script);
         })
         .catch(err => console.error("Error cargando navbar:", err));
+
+
+    const minicargador = document.querySelector(".aa");
+    minicargador.style.display = "";
+    window.addEventListener("load", () => {
+        const minicargador = document.querySelector(".aa");
+        if (minicargador) {
+            setTimeout(() => {
+                minicargador.style.display = "none";
+            }, 2000); // mismo tiempo que en el transition
+        }
+    });
+
+    const payBtn = document.querySelector('.add_address');
+    const modal = document.getElementById('successModal');
+    const closeBtn = document.querySelector('.close-btn');
+
+    // Mostrar modal al hacer click en pay
+    payBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        modal.classList.add('show');
+    });
+    closeBtn.addEventListener('click', function () {
+        modal.classList.remove('show');
+    });
+
+    window.addEventListener('click', function (e) {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+        }
+    });
 </script>
 
 </html>

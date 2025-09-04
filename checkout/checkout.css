@@ -1,6 +1,15 @@
 :root {
     --LeBlanc: #FCFCFC;
     --font: Hel;
+    --blanco-fondo: #FCFCFC;
+    --gris-fondo: #F8F8F8;
+    --gris-claro: #ccc;
+    --blanco-form: #FFFFFF;
+    --gris-form: #F7F7F7;
+    --negro: #000000;
+    --gris-oscuro: #666;
+    --negro-boton: #1a1a1a;
+    --rojo-enlace: #DD8560;
 }
 
 @font-face {
@@ -31,7 +40,18 @@ body {
     width: 100%;
     height: 70%;
 }
-
+.aa{
+    width: 100%;
+    height: 100%;
+    background-color: #FCFCFC;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
 .main {
     width: 100%;
     min-height: 100dvh;
@@ -149,6 +169,7 @@ body {
     font-family: T;
     font-size: 15px;
     gap: 15px;
+    z-index: 1;
 }
 
 .bag {
@@ -156,6 +177,119 @@ body {
     height: 20px;
     margin-bottom: 1%;
 }
+/*Modal*/
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background: var(--blanco-form);
+    padding: 40px 30px;
+    width: 400px;
+    height: 450px;
+    max-width: 90%;
+    max-height: 80%;
+    text-align: center;
+    position: relative;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none; 
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.modal-content h2 {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;   
+    font-weight: normal; 
+}
+.modal-content h4 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight:100;
+    color: #333333f8;
+}
+.modal-content p {
+    font-size: 0.7em;
+    font-weight:100;
+    color: #5c5c5c;
+}
+.lineacheck {
+    width: 120px;
+    margin: 1rem auto;
+    display: block;
+}
+.modal-content h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight:100;
+    color: #333333f8;
+}
+
+.success-icon {
+    width: 60px;
+    margin: 1rem 0;
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.icon {
+    display: flex;
+    align-items: center;
+}
+.back-btn {
+    margin-top: 15px;
+    background-color: var(--negro-boton);
+    padding: 0.7rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.back-btn a {
+    text-decoration: none;
+    color: var(--blanco-fondo);
+    font-family: var(--Font);
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.modal-content {
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+
 
 @media (min-width: 1024px) {
     .container_products {
