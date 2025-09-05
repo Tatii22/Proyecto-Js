@@ -7,6 +7,8 @@
     src: url("/fuentes/Helvetica Regular.otf") format("opentype");
     font-weight: normal;
     }
+
+
     @font-face {
     font-family: "T"; 
     src: url("/fuentes/TenorSans.woff2") format("opentype");
@@ -262,3 +264,160 @@
         font-family: Hel;
         font-size: 14px;
     }    
+
+@media screen and (min-width: 1000px){
+        .products_container{
+        gap: 30px;
+        width: 100%;
+        height: 200px;
+        overflow: visible;
+        padding: 20px;
+        background-color: #DD8560;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product{
+        width: 100%;
+        height: 200px;
+        max-height: 200px;
+        border: 1px solid #eee;
+        padding: 15px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        gap: 15px;
+        transition: transform 0.2s ease-in-out;
+        background-color: #DD8560;
+    }
+
+    .product:hover{
+        transform: scale(1.02);
+    }
+
+    .Test{
+
+
+
+        max-width: 80%;
+        flex-direction: row;
+        height: 200px;
+        max-height: 300px;        
+        align-items: center;
+        margin-left: 5%;
+    }
+
+    .T_img{
+        width: 40%;
+        height: 200px;
+    }
+
+    .T_img img{
+        width: 100%;
+        max-width: 180px;
+        object-fit: contain;
+        
+    }
+
+    .T_info{
+        width: 100%;
+        gap: 10px;
+        max-height: 150px;
+        font-size: 14px;
+    }
+
+    .title{ font-size: 16px; }
+    .price{ font-size: 15px; }
+    .des{ font-size: 13px; min-height: 35px;margin-bottom: 5px; }
+    .size div{
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+    .eliminar{
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+    .footer2 {
+        margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  background: #fafafa;
+  padding: 30px 60px;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+.footer{
+display: none;
+}
+    .carrousel{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+/* Izquierda */
+.footer-left h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.footer-left p {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Centro */
+.footer-center {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+}
+
+/* Derecha */
+.footer-right {
+  text-align: right;
+}
+.social-icons {
+  margin-bottom: 10px;
+}
+.social-icons a {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #222;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: #2196f3;
+}
+.footer-links a {
+  margin-left: 15px;
+  font-size: 13px;
+  color: #888;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: #2196f3;
+}
+
+}
