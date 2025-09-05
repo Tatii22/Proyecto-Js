@@ -182,3 +182,30 @@
     font-family: T;
     font-size: 14px;
 }    
+
+@media (min-width: 1000px) {
+    .main{
+
+        width: 30%;
+        margin-left: 35%;
+        height: 100dvh;
+        padding-top: 5%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .add_address{
+        align-self: center;
+    width: 50%;
+    height: 70px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: T;
+    font-size: 14px;
+    margin-bottom: 15%;
+    }      
+}
