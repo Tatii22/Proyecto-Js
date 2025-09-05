@@ -1,6 +1,4 @@
-// data.js
 
-// Plantilla de usuario
 function crearUsuarioBase() {
   return {
     id: null,
