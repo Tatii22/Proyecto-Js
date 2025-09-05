@@ -411,7 +411,9 @@
         flex-direction: column;
         gap: 5px;
     }
-
+    .footer2{
+        display: none;
+    }
     @media (min-width: 1000px) {
         .video{
         display: flex;
