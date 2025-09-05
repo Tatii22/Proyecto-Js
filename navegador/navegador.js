@@ -89,3 +89,171 @@ window.addEventListener("scroll", () => {
     document.body.appendChild(script);
   })
   .catch(err => console.error("Error cargando navbar:", err)); */
+  // Seleccionar contenedor donde se mostrarán los productos
+const productsContainer = document.querySelector(".products_container");
+
+// Obtener usuario activo desde localStorage
+let usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+
+// Función para renderizar productos del carrito
+function renderizarCarrito() {
+    if (!usuarioActivo || !usuarioActivo.carrito || usuarioActivo.carrito.length === 0) {
+        productsContainer.innerHTML = "<p>Empty</p>";
+        return;
+    }
+
+    productsContainer.innerHTML = "";
+
+    usuarioActivo.carrito.forEach((p, index) => {
+        const productHTML = `
+            <div class="product" data-index="${index}">
+                <div class="Test">
+                    <div class="T_img">
+                        <img src="${p.image}" alt="${p.title}" width="70">
+                    </div>
+                    <div class="T_info">
+                        <div class="title"> 
+                            <p><b>${p.title}</b></p>
+                        </div>
+                        <div class="des"> 
+                            <p>Cantidad : ${p.quantity}</p>     <button class="eliminar">x</button>
+                        </div>
+                        <div class="price"> 
+                            <p>$${p.price}</p>
+                        </div>
+                        <div class="rating"> 
+
+                        </div>
+                        <div class="size">
+                            <p>Size</p>
+                            <div>S</div>
+                            <div>M</div>
+                            <div>L</div>
+                        </div>            
+                    </div>
+                </div> 
+            </div>
+        `;
+        productsContainer.insertAdjacentHTML("beforeend", productHTML);
+    });
+
+    // Asignar eventos a los botones "Eliminar"
+    document.querySelectorAll(".eliminar").forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            eliminarProducto(i);
+        });
+    });
+}
+
+// Función para eliminar/restar producto del carrito
+function eliminarProducto(index) {
+    if (usuarioActivo.carrito[index].quantity > 1) {
+        // Restar 1 a la cantidad
+        usuarioActivo.carrito[index].quantity -= 1;
+    } else {
+        // Si queda en 0, eliminar el producto
+        usuarioActivo.carrito.splice(index, 1);
+    }
+
+    // Recalcular el total del carrito
+    usuarioActivo.totalCarrito = usuarioActivo.carrito.reduce(
+        (acc, p) => acc + p.price * p.quantity, 
+        0
+    );
+
+    // Actualizar en localStorage
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    let idx = usuarios.findIndex(u => u.id === usuarioActivo.id);
+    if (idx !== -1) {
+        usuarios[idx] = usuarioActivo;
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    }
+    localStorage.setItem("usuarioActivo", JSON.stringify(usuarioActivo));
+
+
+    renderizarCarrito();
+}
+// Render inicial
+    renderizarCarrito();
+const productsContainer2 = document.querySelector(".container_products");
+
+function renderizarCarrito2() {
+    if (!usuarioActivo || !usuarioActivo.carrito || usuarioActivo.carrito.length === 0) {
+        productsContainer2.innerHTML = "<p>Empty</p>";
+        return;
+    }
+
+    productsContainer2.innerHTML = "";
+
+    usuarioActivo.carrito.forEach((p, index) => {
+        const productHTML = `
+            <div class="product" data-index="${index}">
+                <div class="Test">
+                    <div class="T_img">
+                        <img src="${p.image}" alt="${p.title}" width="70">
+                    </div>
+                    <div class="T_info">
+                        <div class="title"> 
+                            <p><b>${p.title}</b></p>
+                        </div>
+                        <div class="des"> 
+                            <p>Cantidad : ${p.quantity}</p>     <button class="eliminar">x</button>
+                        </div>
+                        <div class="price"> 
+                            <p>$${p.price}</p>
+                        </div>
+                        <div class="rating"> 
+
+                        </div>
+                        <div class="size">
+                            <p>Size</p>
+                            <div>S</div>
+                            <div>M</div>
+                            <div>L</div>
+                        </div>            
+                    </div>
+                </div> 
+            </div>
+        `;
+        productsContainer2.insertAdjacentHTML("beforeend", productHTML);
+    });
+
+    // Asignar eventos a los botones "Eliminar"
+    document.querySelectorAll(".eliminar").forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            eliminarProducto(i);
+        });
+    });
+}
+
+// Función para eliminar/restar producto del carrito
+
+renderizarCarrito2();
+document.querySelector(".back-btn").addEventListener("click", (e) => {
+  e.preventDefault(); // evitar que se vaya de inmediato
+
+  let usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+  if (usuarioActivo) {
+    // Resetear carrito del usuario activo
+    usuarioActivo.carrito = [];
+    usuarioActivo.totalCarrito = 0;
+
+    // Actualizar dentro de usuarios[]
+    usuarios = usuarios.map(u =>
+      u.id === usuarioActivo.id ? { ...u, carrito: [], totalCarrito: 0 } : u
+    );
+
+    // Guardar cambios
+    localStorage.setItem("usuarioActivo", JSON.stringify(usuarioActivo));
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+    console.log("Carrito reseteado ✅", usuarioActivo, usuarios);
+  }
+
+  // Dar un pequeño delay para asegurar que se guarde
+  setTimeout(() => {
+    window.location.href = "/home/home.html";
+  }, 100);
+});

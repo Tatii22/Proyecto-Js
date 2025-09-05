@@ -1,7 +1,6 @@
 
 document.body.style.overflow = "hidden";
 
-
 fetch("/navegador/nav.html")
   .then(res => res.text())
   .then(data => {
@@ -12,7 +11,6 @@ fetch("/navegador/nav.html")
   })
   .catch(err => console.error("Error cargando navbar:", err));
 
-
 const minicargador = document.querySelector(".aa");
 minicargador.style.display = "";
 
@@ -20,11 +18,10 @@ window.addEventListener("load", () => {
   if (minicargador) {
     setTimeout(() => {
       minicargador.style.display = "none";
-      document.body.style.overflow = "";    
-    }, 2000); 
+      document.body.style.overflow = "";
+    }, 2000);
   }
 });
-
 
 const params = new URLSearchParams(window.location.search);
 const productId = parseInt(params.get("id"));
@@ -32,7 +29,6 @@ const productId = parseInt(params.get("id"));
 if (!productId) {
   document.querySelector("#product").innerHTML = "<p>No se selecciono ningún producto.</p>";
 } else {
-
   fetch("https://fakestoreapi.com/products")
     .then(res => res.json())
     .then(data => {
@@ -52,7 +48,7 @@ function renderProduct(product) {
   document.querySelector("#product").innerHTML = `
     <main class="main">
         <div class="img_product">
-          <img src="${product.image}" alt="${product.title}" width="150">
+          <img src="${product.image}" alt="${product.title}" width="120">
         </div>
         <div class="title">
             <p><b>${product.title}</b></p>
@@ -70,7 +66,7 @@ function renderProduct(product) {
             <div>L</div>
           </div> 
         <div class="button">
-            <p>+ ADD TO CART</p>
+            <button id="addToCartBtn">+ ADD TO CART</button>
         </div>
     </main>
     <section class="info">
@@ -126,7 +122,78 @@ function renderProduct(product) {
         <br>        
         <p>DOWNLOAD APPLICATION IO ></p>
         <p>DOWNLOAD APPLICATION ANDROID ></p>
-
     </footer>
+        <footer class="footer2">
+  <div class="footer-container">
+
+    <!-- Izquierda -->
+    <div class="footer-left">
+      <p>Copyright© OpenUI All Rights Reserved.</p>
+    </div>
+
+    <!-- Centro -->
+    <div class="footer-center">
+      <p>support@openui.design</p>
+      <p>+60 825 876</p>
+      <p>08:00 - 22:00 · Everyday</p>
+    </div>
+
+    <!-- Derecha -->
+    <div class="footer-right">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <nav class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Blog</a>
+      </nav>
+    </div>
+
+  </div>
+</footer>
   `;
+
+  document.getElementById("addToCartBtn").addEventListener("click", () => {
+
+    let usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+
+    if (!usuarioActivo) {
+      alert("Debes iniciar sesión para agregar productos al carrito.");
+      return;
+    }
+
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    let index = usuarios.findIndex(u => u.id === usuarioActivo.id);
+
+    if (index === -1) {
+      alert("Error: el usuario no existe.");
+      return;
+    }
+
+    let carrito = usuarios[index].carrito || [];
+    let productoExistente = carrito.find(p => p.id === product.id);
+
+    if (productoExistente) {
+      productoExistente.quantity += 1;
+    } else {
+      carrito.push({
+        id: product.id,
+        title: product.title,
+        price: product.price,
+        image: product.image,
+        quantity: 1
+      });
+    }
+
+    usuarios[index].carrito = carrito;
+    usuarios[index].totalCarrito = carrito.reduce((acc, p) => acc + p.price * p.quantity, 0);
+
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    localStorage.setItem("usuarioActivo", JSON.stringify(usuarios[index])); 
+
+    renderizarCarrito();
+  });
 }
