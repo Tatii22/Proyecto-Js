@@ -182,3 +182,97 @@
     font-family: T;
     font-size: 14px;
 }    
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #fff;
+  }
+
+  .main {
+    max-width: 700px;
+    max-height: 90%;     /* antes 900px */
+    margin-top: 70px;     /* antes 60px */
+    padding: 60px 40px;   /* antes 40px 60px */
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;            /* antes 50px */
+    border: 1px solid #eaeaea;
+    border-radius: 10px;  /* un poco más sutil */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  }
+
+  .tittle {
+    font-size: 2rem;      /* antes 2.5rem */
+    margin-top: 0;
+    margin-bottom: 15px;  /* antes 20px */
+    font-family: T;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+
+  .Shipping_Adress, .Shipping_Method, .PaymentMethod {
+    font-size: 0.95rem;   /* antes 1rem */
+    padding: 0;
+    gap: 8px;             /* antes 10px */
+    margin-bottom: 25px;  /* antes 30px */
+  }
+
+  .s_a_c, .s_a_c_2 {
+    font-size: 0.9rem;    /* antes 0.95rem */
+    line-height: 1.5;
+    color: #444;
+  }
+
+  #s_a_c_button {
+    width: 100%;
+    height: 45px;         /* antes 50px */
+    border-radius: 22px;
+    margin-top: 8px;      /* antes 10px */
+    padding: 0 15px;      /* antes 20px */
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+
+  .select-box {
+    padding: 10px 15px;   /* antes 12px 20px */
+    font-size: 0.95rem;   /* antes 1rem */
+    background: #f7f7f7;
+    border-radius: 22px;
+  }
+
+  .select-box select {
+    font-size: 0.95rem;   /* antes 1rem */
+  }
+
+  .total {
+    font-size: 1rem;      /* antes 1.1rem */
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;    /* antes 20px */
+    margin-top: 15px;     /* antes 20px */
+  }
+
+  .total span:last-child {
+    color: #e74c3c;
+    font-size: 1.1rem;    /* antes 1.2rem */
+    font-weight: bold;
+  }
+
+  .add_address {
+    height: 50px;         
+    font-size: 0.95rem;   
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .add_address:hover {
+    background-color: #222;
+  }
+}
