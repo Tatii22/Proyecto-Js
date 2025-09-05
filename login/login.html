@@ -17,7 +17,7 @@
                 <p>Hello! You’ve <br> been Missed!</p>
             </div>
 
-            <form class="login-form">
+            <form class="login-form" action="/home/home.html" method="get">
                 <div class="input-group">
                     <img src="../public/src/icons/user.svg" alt="user" class="input-icon" />
                     <input type="text" id="username" name="username" placeholder="Username" required />
@@ -26,7 +26,7 @@
                 <div class="input-group">
                     <img src="../public/src/icons/candado.svg" alt="lock" class="input-icon2" />
                     <input type="password" id="password" name="password" placeholder="Password" required />
-                    <img src="../public/src/icons/ojo.svg" alt="show/hide password" class="toggle-password" />
+                    <img src="../public/src/icons/eye-slash.svg" alt="show/hide password" class="toggle-password" />
                 </div>
 
                 <div class="forgot">
@@ -34,7 +34,8 @@
                 </div>
 
                 <div class="sign-button-container">
-                    <button type="submit" class="signin-button">Sign In</button>
+                        <button type="submit" class="signin-button">Sign In</button>
+
                 </div>
             </form>
 
@@ -45,11 +46,11 @@
             </div>
 
             <div class="social-buttons-container">
-                <a href="#" class="social-button google">
+                <a href="https://accounts.google.com/" target="_blank" class="social-button google">
                     Google
                     <img src="/public/src/icons/simbolo-de-google.svg" alt="Google Logo" />
                 </a>
-                <a href="#" class="social-button facebook">
+                <a href="https://www.facebook.com/" target="_blank" class="social-button facebook">
                     <img src="/public/src/icons/facebook.svg" alt="Facebook Logo" />
                     Facebook
                 </a>
@@ -61,6 +62,7 @@
             <img src="/public/src/img/modelo.png" alt="Modelo Image" class="modelo">
         </section>
     </main>
+    <script src="/data/data.js"></script>
+    <script src="/login/login.js"></script>
 </body>
-
 </html>

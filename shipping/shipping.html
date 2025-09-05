@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/shipping/shipping.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <div class="aa">
+        <img src="/public/src/img/image-removebg-preview (91) 3.png" alt="">
+    </div>
+    <div id="nav-container">
+
+    </div>
+    <div class="main">
+        <div class="tittle">
+            <p>ADD SHIPPING ADRESS</p>
+            <img style="margin-top: 15px;" src="/public/src/icons/Devider.svg" alt="">
+        </div>
+
+        <div class="form">
+            <form class="address-form">
+                <div class="row">
+                <input type="text" id="first" name="first" placeholder="First name">
+                <input type="text" id="last" name="last" placeholder="Last name">
+                </div>
+
+                <input type="text" id="address" name="address" placeholder="Address">
+
+                <input type="text" id="city" name="city" placeholder="City">
+
+                <div class="row">
+                <input type="text" id="state" name="state" placeholder="State">
+                <input type="text" id="zip" name="zip" placeholder="ZIP code">
+                </div>
+
+                <input type="text" id="phone" name="phone" placeholder="Phone number">
+
+            </form>
+        </div>
+
+        <button class="add_address">
+            <p>Add Adress</p>
+        </button>        
+    </div>
+</body>
+<script>
+    document.body.style.overflow = "hidden";
+  const minicargador = document.querySelector(".aa");
+        minicargador.style.display = "";
+  window.addEventListener("load", () => {
+    const minicargador = document.querySelector(".aa");
+    if (minicargador) {
+      setTimeout(() => {
+        minicargador.style.display = "none";
+      }, 2000); // mismo tiempo que en el transition
+    }
+  });
+    fetch("/navegador/nav.html")
+    .then(res => res.text())
+    .then(data => {
+    document.getElementById("nav-container").innerHTML = data;
+
+    const script = document.createElement("script");
+    script.src = "/navegador/navegador.js";
+    document.body.appendChild(script);
+    })
+    .catch(err => console.error("Error cargando navbar:", err));
+</script>
+</html>

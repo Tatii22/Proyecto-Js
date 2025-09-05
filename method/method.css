@@ -1,0 +1,278 @@
+    :root{
+        --LeBlanc: #FCFCFC;
+        --font: Hel;
+    }
+    @font-face {
+    font-family: "Hel"; 
+    src: url("/fuentes/Helvetica Regular.otf") format("opentype");
+    font-weight: normal;
+    }
+    @font-face {
+    font-family: "T"; 
+    src: url("/fuentes/TenorSans.woff2") format("opentype");
+    font-weight: 100;
+     font-style: normal;
+    }
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    a{
+    text-decoration: none;
+    color: inherit;      
+    }
+    body{
+        width: 100%;
+        height: 70%;
+    }
+    .main{
+        width: 100%;
+        height: 100dvh;
+        padding-top: 15%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .tittle{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    font-family: T;
+    }
+    .aa{
+        width: 100%;
+        height: 100%;
+        background-color: #FCFCFC;
+        position: absolute;
+        top: 0px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+    }
+ 
+    .Shipping_Adress{
+        width: 100%;
+        height: 30%;
+        padding-left: 15px;
+        padding-right: 15px;   
+        font-family: T;  
+        font-size: 14px; 
+    }
+    .s_a_c{
+        width: 100%;
+        height: 70%;
+        position: relative;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        margin-top: 10px;
+
+        color: #888888;
+    }   
+    .s_a_c_2{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        margin-top: 10px;
+
+        color: #888888;        
+    } 
+    #s_a_c_button{
+        width: 100%;
+        height: 44px;
+        background-color: #efefef;
+        position: absolute;
+        border-radius: 20px;
+        bottom: -10px;
+        left: -5px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .Shipping_Method{
+        width: 100%;
+        height: 10%;
+        font-family: T;
+        font-size: 14px;        
+        padding-left: 15px;
+        padding-right: 15px;      
+        position: relative;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        margin-top: 10px;
+        color: #888888;
+    }
+
+
+    .PaymentMethod{
+        width: 100%;
+        height: 10%;
+        font-family: T;
+        font-size: 14px;        
+        padding-left: 15px;
+        padding-right: 15px;      
+        position: relative;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        margin-top: 10px;
+
+        color: #888888;      
+        margin-bottom: 50px;
+    }    
+    .total{
+        width: 100%;
+        height: 5%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 15px;
+        padding-right: 15px;
+        align-items: center;
+        font-family: T;
+    }    
+    .add_address{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: T;
+    font-size: 14px;
+    }      
+
+
+
+.select-box {
+  border-radius: 25px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+    color: #888888;
+    width: 100%;
+}
+
+.select-box select {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  width: 100%;
+    color: #888888;
+    font-family: T;
+    font-size: 14px;
+}    
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #fff;
+  }
+
+  .main {
+    max-width: 700px;
+    max-height: 90%;     /* antes 900px */
+    margin-top: 70px;     /* antes 60px */
+    padding: 60px 40px;   /* antes 40px 60px */
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;            /* antes 50px */
+    border: 1px solid #eaeaea;
+    border-radius: 10px;  /* un poco más sutil */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  }
+
+  .tittle {
+    font-size: 2rem;      /* antes 2.5rem */
+    margin-top: 0;
+    margin-bottom: 15px;  /* antes 20px */
+    font-family: T;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+
+  .Shipping_Adress, .Shipping_Method, .PaymentMethod {
+    font-size: 0.95rem;   /* antes 1rem */
+    padding: 0;
+    gap: 8px;             /* antes 10px */
+    margin-bottom: 25px;  /* antes 30px */
+  }
+
+  .s_a_c, .s_a_c_2 {
+    font-size: 0.9rem;    /* antes 0.95rem */
+    line-height: 1.5;
+    color: #444;
+  }
+
+  #s_a_c_button {
+    width: 100%;
+    height: 45px;         /* antes 50px */
+    border-radius: 22px;
+    margin-top: 8px;      /* antes 10px */
+    padding: 0 15px;      /* antes 20px */
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+
+  .select-box {
+    padding: 10px 15px;   /* antes 12px 20px */
+    font-size: 0.95rem;   /* antes 1rem */
+    background: #f7f7f7;
+    border-radius: 22px;
+  }
+
+  .select-box select {
+    font-size: 0.95rem;   /* antes 1rem */
+  }
+
+  .total {
+    font-size: 1rem;      /* antes 1.1rem */
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;    /* antes 20px */
+    margin-top: 15px;     /* antes 20px */
+  }
+
+  .total span:last-child {
+    color: #e74c3c;
+    font-size: 1.1rem;    /* antes 1.2rem */
+    font-weight: bold;
+  }
+
+  .add_address {
+    height: 50px;         
+    font-size: 0.95rem;   
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .add_address:hover {
+    background-color: #222;
+  }
+}
